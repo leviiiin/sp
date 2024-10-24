@@ -429,28 +429,17 @@
         }
       }
 
-      .button {
-        display: inline-block;
-        max-width: 430px;
-        width: 75%;
-        padding: 20px 0;
-        border-radius: 40px;
-        background-color: #ff6400;
-
-        color: #ffffff;
-        font-size: 28px;
-        line-height: 28px;
-        font-weight: 700;
-        text-align: center;
-        text-decoration: none;
-        cursor: pointer;
-        transition: all 0.35s ease-in-out;
-      }
-
-      .button:hover {
+      a.button:hover {
         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
           rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
         background-color: #ff5100;
+      }
+
+      #ipvanish-logo {
+        padding-bottom: 6px;
+        @media (max-width: 375px) {
+          padding-bottom: 4.5px;
+        }
       }
     </style>
   </head>
@@ -517,21 +506,10 @@
           >
             <tr>
               <td
-                class="lrPadding"
-                style="border-collapse: collapse; width: 30px"
-              >
-                &nbsp;
-              </td>
-              <td
-                class="col1"
                 style="
-                  border-collapse: collapse;
+                  padding: 15px;
+                  text-align: center;
                   vertical-align: middle;
-                  padding: 10px 0;
-                  height: 80px;
-                  display: flex;
-                  align-items: center;
-                  gap: 30px;
                 "
               >
                 <a
@@ -540,7 +518,7 @@
                   style="color: #089bd9; display: block"
                 >
                   <img
-                    src="image/sp-logo.png"
+                    src="https://www.stickypassword.com/email/images/sp-logo.png"
                     width="240"
                     height="45"
                     alt="Sticky Password"
@@ -551,11 +529,17 @@
                       border: none;
                       display: block;
                     "
-                /></a>
-                <div
-                  class="logo-line"
-                  style="width: 2px; height: 34px; background-color: lightgray"
-                ></div>
+                  />
+                </a>
+              </td>
+
+              <td
+                style="
+                  padding: 15px;
+                  text-align: center;
+                  vertical-align: bottom;
+                "
+              >
                 <a
                   href="https://affiliate.ipvanish.com/aff_c?offer_id=44&aff_id=3310&url_id=734"
                   class="logoLink"
@@ -563,8 +547,9 @@
                 >
                   <img
                     src="https://www.ipvanish.com/wp-content/uploads/2021/10/ipvanish-text-logo-300x46.png"
-                    width="180"
-                    height="30"
+                    id="ipvanish-logo"
+                    width="150"
+                    height="23"
                     alt="IPVanish"
                     style="
                       outline: none;
@@ -572,64 +557,13 @@
                       -ms-interpolation-mode: bicubic;
                       border: none;
                       display: block;
+                      margin-left: auto;
                     "
-                /></a>
-              </td>
-              <td
-                class="col2"
-                style="
-                  border-collapse: collapse;
-                  vertical-align: middle;
-                  padding: 10px 0;
-                  text-align: right;
-                  height: 80px;
-                "
-              ></td>
-              <td
-                class="lrPadding"
-                style="border-collapse: collapse; width: 30px"
-              >
-                &nbsp;
+                  />
+                </a>
               </td>
             </tr>
           </table>
-
-          <!-- <table
-            cellpadding="0"
-            cellspacing="0"
-            border="0"
-            align="center"
-            class="blockTable commonSection"
-            style="
-              border-collapse: collapse;
-              mso-table-lspace: 0pt;
-              mso-table-rspace: 0pt;
-              width: 100%;
-            "
-          >
-            <tr>
-              <td>
-                <a
-                  href="https://www.stickypassword.com/buy-premium?qid=e4713440c1e98ca&utm_source=promo-en-85&utm_medium=mail&utm_campaign=promo-en-85&utm_term=top-button&campaign_affid=d-promou-en-85 "
-                  class="buttonLink"
-                  style="color: #089bd9; display: block; margin: 0 auto"
-                  ><img
-                    src="https://www.stickypassword.com/email/images/lifetime-september-30-en.jpg"
-                    alt="GET PREMIUM"
-                    width="600"
-                    height="316"
-                    style="
-                      outline: none;
-                      text-decoration: none;
-                      -ms-interpolation-mode: bicubic;
-                      border: none;
-                      display: block;
-                      margin: 0 auto;
-                    "
-                /></a>
-              </td>
-            </tr>
-          </table> -->
 
           <table
             cellpadding="0"
@@ -704,9 +638,6 @@
               width: 100%;
               background: #ffffff;
               background-color: #ffffff;
-              /* background-image: url(https://www.stickypassword.com/email/images/line.gif);
-              background-position: 0 50%;
-              background-repeat: repeat-x; */
             "
           >
             <tr>
@@ -720,7 +651,26 @@
               >
                 <a
                   href="https://affiliate.ipvanish.com/aff_c?offer_id=44&aff_id=3310&url_id=734"
-                  class="button"
+                  class="mobile-fs button"
+                  style="
+                    background-color: #ff6400;
+                    color: #ffffff;
+                    display: inline-block;
+                    font-size: 14px;
+                    line-height: 28px;
+                    text-align: center;
+                    text-decoration: none;
+                    width: 75%;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    border-radius: 40px;
+                    max-width: 430px;
+                    font-weight: 700;
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    font-size: 28px;
+                    transition: 0.2s;
+                  "
                 >
                   Get my VPN deal today!
                 </a>
@@ -792,7 +742,11 @@
                 class="mainCol"
                 style="border-collapse: collapse; padding: 16px 0"
               >
-                <img src="image/ipvanish-devices.png" style="width: 100%" alt="image" />
+                <img
+                  src="https://www.stickypassword.com/email/images/ipvanish-devices.png"
+                  style="width: 100%"
+                  alt="image"
+                />
               </td>
             </tr>
           </table>
@@ -820,7 +774,7 @@
               </td>
               <td
                 class="mainCol"
-                style="border-collapse: collapse; padding-top: 5px;"
+                style="border-collapse: collapse; padding-top: 5px"
               >
                 <p style="margin-bottom: 15px; margin-top: 0; text-align: left">
                   Beyond security, a VPN opens up a world of entertainment
@@ -863,9 +817,8 @@
               width: 100%;
               background: #ffffff;
               background-color: #ffffff;
-              /* background-image: url(https://www.stickypassword.com/email/images/line.gif);
               background-position: 0 50%;
-              background-repeat: repeat-x; */
+              background-repeat: repeat-x;
             "
           >
             <tr>
@@ -879,7 +832,26 @@
               >
                 <a
                   href="https://affiliate.ipvanish.com/aff_c?offer_id=44&aff_id=3310&url_id=734"
-                  class="button"
+                  class="mobile-fs button"
+                  style="
+                    background-color: #ff6400;
+                    color: #ffffff;
+                    display: inline-block;
+                    font-size: 14px;
+                    line-height: 28px;
+                    text-align: center;
+                    text-decoration: none;
+                    width: 75%;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    border-radius: 40px;
+                    max-width: 430px;
+                    font-weight: 700;
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    font-size: 28px;
+                    transition: 0.2s;
+                  "
                 >
                   Get my VPN deal today!
                 </a>
@@ -917,7 +889,7 @@
                 <td>
                   <img
                     style="width: 100%; margin: 15px 0; padding-top: 15px"
-                    src="image/IPVanish-rating.png"
+                    src="https://www.stickypassword.com/email/images/ipvanish-rating.png"
                     alt="image"
                   />
                 </td>
