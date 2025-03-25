@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./toogleCheckbox.css" />
+  </head>
+  <body>
+    <div class="bg-gray">
+      <div class="container">
+        <div class="choose-plan">
+          <div class="choose-plan__toggle">
+            <h1 style="font-size: 1.75rem; margin: 0; margin-bottom: 15px">
+              Choose your plan
+            </h1>
+            <input type="checkbox" id="toggle" class="toggleCheckbox" />
+            <label for="toggle" class="toggleContainer">
+              <div>Individuals</div>
+              <div>Teams</div>
+            </label>
+          </div>
+          <div class="plans" id="individualsPlans">
+            <div class="plan free">
+              <h3 class="plan-title">Free Trial</h3>
+              <p class="plan-description">
+                Try Premium, risk-free for 30 days.
+              </p>
+              <div class="plan-price">$0</div>
+              <div class="plan-save"></div>
+              <button class="plan-btn ghost">Start 30-day free trial</button>
+              <div class="plan-btn__below">No credit card required</div>
+              <div class="plan-dwm">Sign up for a license to get DWM</div>
+              <div class="plan-line"></div>
+              <div class="plan-features">
+                See all features
+                <span class="chevron">&#10095;</span>
+              </div>
+            </div>
+            <div class="plan badge">
+              <h3 class="plan-title" style="color: #003082">Lifetime</h3>
+              <p class="plan-description">
+                Premium protection Lifetime value, only from Sticky Password.
+              </p>
+              <div class="plan-price" style="color: #003082">
+                <span class="old">$199.99</span>
+                $79.99
+              </div>
+              <div class="plan-save" style="color: red">Save 60%</div>
+              <button class="plan-btn">Get Lifetime now</button>
+              <div class="plan-btn__below">One time payment</div>
+              <div class="plan-dwm">
+                <div class="plan-dwm__icon">Password Manager</div>
+                <div class="plan-dwm__icon">1 year of Dark Web Monitoring</div>
+              </div>
+              <div class="plan-line"></div>
+              <div class="plan-features">
+                See all features
+                <span class="chevron">&#10095;</span>
+              </div>
+            </div>
+            <div class="plan free">
+              <h3 class="plan-title">1 Year</h3>
+              <p class="plan-description">
+                Premium protection, one year at a time.
+              </p>
+              <div class="plan-price">
+                <span class="old">$39.99</span>
+                $29.99
+              </div>
+              <div class="plan-save">Save 25%</div>
+              <button class="plan-btn ghost">Buy Premium now</button>
+              <div class="plan-btn__below">30-day money back guarantee</div>
+              <div class="plan-dwm">
+                <div class="plan-dwm__icon">Password Manager</div>
+                <div class="plan-dwm__icon">1 year of Dark Web Monitoring</div>
+              </div>
+              <div class="plan-line"></div>
+              <div class="plan-features">
+                See all features
+                <span class="chevron">&#10095;</span>
+              </div>
+            </div>
+          </div>
+          <div class="plans" id="teamsPlans">
+            <div class="plan free">
+              <h3 class="plan-title">Free Trial</h3>
+              <p class="plan-description">
+                Get 30 days of the complete password security package for yout
+                team plus Dark Web Monitoring.
+              </p>
+              <div class="plan-price">$0</div>
+              <div class="plan-save" style="color: red"></div>
+              <button class="plan-btn ghost">Request a free trial</button>
+              <div class="plan-btn__below">No credit card required</div>
+              <div class="plan-dwm"></div>
+              <div class="plan-line"></div>
+              <div class="plan-features">
+                See all features
+                <span class="chevron">&#10095;</span>
+              </div>
+            </div>
+            <div class="plan badge">
+              <h3 class="plan-title" style="color: #003082">
+                Premium for teams
+              </h3>
+              <p class="plan-description">
+                The complete password security package for your team also
+                includes Dark Web Monitoring
+              </p>
+              <div class="plan-price" style="color: #003082">
+                <span class="old"></span>
+                $29.99
+              </div>
+              <div class="plan-save">per user / year</div>
+              <button class="plan-btn">Get Teams now</button>
+              <div class="plan-btn__below">One time payment</div>
+              <div class="plan-dwm">
+                <div class="plan-dwm__icon">Password Manager</div>
+                <div class="plan-dwm__icon">Dark Web Monitoring</div>
+              </div>
+              <div class="plan-line"></div>
+              <div class="plan-features">
+                See all features
+                <span class="chevron">&#10095;</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="features">
+        <h2 class="features__title" id="IndividualsFeaturesTitle">
+          With Sticky Password Premium you get all of this:
+        </h2>
+        <h2 class="features__title" id="TeamsFeaturesTitle">
+          With Sticky Password for Teams you get all of this:
+        </h2>
+        <div class="features__list">
+          <div class="feature">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 32 32"
+              version="1.1"
+              fill="#0d3a7d"
+              width="50px"
+              height="50px"
+            >
+              <g id="surface1" fill="#0d3a7d">
+                <path
+                  style=""
+                  d="M 13 4 C 11.089844 4 9.542969 5.386719 9.15625 7.1875 C 6.824219 7.605469 5 9.550781 5 12 C 5 12.246094 5.027344 12.464844 5.0625 12.6875 C 4.417969 13.636719 4 14.753906 4 16 C 4 17.796875 4.894531 19.308594 6.15625 20.40625 C 6.066406 20.761719 6 21.117188 6 21.5 C 6 23.972656 8.027344 26 10.5 26 C 10.527344 26 10.539063 26 10.5625 26 C 11.144531 27.128906 12.152344 28 13.5 28 C 14.476563 28 15.363281 27.589844 16 26.9375 C 16.636719 27.589844 17.523438 28 18.5 28 C 19.847656 28 20.855469 27.128906 21.4375 26 C 21.460938 26 21.472656 26 21.5 26 C 23.847656 26 25.773438 24.171875 25.96875 21.875 L 26 21.875 C 26 21.8125 25.972656 21.75 25.96875 21.6875 C 25.972656 21.625 26 21.5625 26 21.5 C 26 21.128906 25.867188 20.8125 25.78125 20.46875 C 27.078125 19.367188 28 17.828125 28 16 C 28 14.753906 27.582031 13.636719 26.9375 12.6875 C 26.972656 12.464844 27 12.246094 27 12 C 27 9.550781 25.175781 7.605469 22.84375 7.1875 C 22.457031 5.386719 20.910156 4 19 4 C 17.800781 4 16.734375 4.558594 16 5.40625 C 15.265625 4.558594 14.199219 4 13 4 Z M 13 6 C 14.117188 6 15 6.882813 15 8 L 15 10 C 15 11.667969 13.667969 13 12 13 L 12 15 C 13.132813 15 14.160156 14.609375 15 13.96875 L 15 24.5 C 15 25.339844 14.339844 26 13.5 26 C 12.753906 26 12.15625 25.484375 12.03125 24.78125 L 11.84375 23.8125 L 10.875 23.96875 C 10.699219 23.996094 10.589844 24 10.5 24 C 9.109375 24 8 22.890625 8 21.5 C 8 21.191406 8.050781 20.902344 8.15625 20.625 C 8.164063 20.601563 8.179688 20.585938 8.1875 20.5625 C 8.496094 19.792969 9.167969 19.230469 10 19.0625 L 9.59375 17.09375 C 8.550781 17.304688 7.644531 17.859375 7 18.65625 C 6.371094 17.953125 6 17.023438 6 16 C 6 15.0625 6.320313 14.226563 6.875 13.53125 L 7.1875 13.15625 L 7.09375 12.65625 C 7.039063 12.421875 7 12.214844 7 12 C 7 10.332031 8.332031 9 10 9 L 11 9 L 11 8 C 11 6.882813 11.882813 6 13 6 Z M 19 6 C 20.117188 6 21 6.882813 21 8 L 21 9 L 22 9 C 23.667969 9 25 10.332031 25 12 C 25 12.214844 24.960938 12.421875 24.90625 12.65625 L 24.8125 13.15625 L 25.125 13.53125 C 25.679688 14.226563 26 15.0625 26 16 C 26 17.199219 25.488281 18.269531 24.65625 19 C 23.972656 18.394531 23.101563 18 22.125 18 C 21.179688 18 20.328125 18.335938 19.65625 18.90625 L 20.9375 20.4375 C 21.261719 20.164063 21.660156 20 22.125 20 C 23.089844 20 23.859375 20.722656 23.96875 21.65625 C 23.886719 22.972656 22.835938 24 21.5 24 C 21.410156 24 21.300781 23.996094 21.125 23.96875 L 20.15625 23.8125 L 19.96875 24.78125 C 19.84375 25.484375 19.246094 26 18.5 26 C 17.660156 26 17 25.339844 17 24.5 L 17 13.96875 C 17.839844 14.609375 18.867188 15 20 15 L 20 13 C 18.332031 13 17 11.667969 17 10 L 17 8 C 17 6.882813 17.882813 6 19 6 Z "
+                  fill="#0d3a7d"
+                />
+              </g>
+            </svg>
+            <p class="feature__title">All-in-One Password Manager</p>
+            <p class="feature__description">
+              Secure autofill, unlimited storage, strong password generator, and
+              more.
+            </p>
+          </div>
+          <div class="feature">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 32 32"
+              version="1.1"
+              fill="#0d3a7d"
+              width="50px"
+              height="50px"
+            >
+              <g id="surface1" fill="#0d3a7d">
+                <path
+                  style=""
+                  d="M 13 4 C 11.089844 4 9.542969 5.386719 9.15625 7.1875 C 6.824219 7.605469 5 9.550781 5 12 C 5 12.246094 5.027344 12.464844 5.0625 12.6875 C 4.417969 13.636719 4 14.753906 4 16 C 4 17.796875 4.894531 19.308594 6.15625 20.40625 C 6.066406 20.761719 6 21.117188 6 21.5 C 6 23.972656 8.027344 26 10.5 26 C 10.527344 26 10.539063 26 10.5625 26 C 11.144531 27.128906 12.152344 28 13.5 28 C 14.476563 28 15.363281 27.589844 16 26.9375 C 16.636719 27.589844 17.523438 28 18.5 28 C 19.847656 28 20.855469 27.128906 21.4375 26 C 21.460938 26 21.472656 26 21.5 26 C 23.847656 26 25.773438 24.171875 25.96875 21.875 L 26 21.875 C 26 21.8125 25.972656 21.75 25.96875 21.6875 C 25.972656 21.625 26 21.5625 26 21.5 C 26 21.128906 25.867188 20.8125 25.78125 20.46875 C 27.078125 19.367188 28 17.828125 28 16 C 28 14.753906 27.582031 13.636719 26.9375 12.6875 C 26.972656 12.464844 27 12.246094 27 12 C 27 9.550781 25.175781 7.605469 22.84375 7.1875 C 22.457031 5.386719 20.910156 4 19 4 C 17.800781 4 16.734375 4.558594 16 5.40625 C 15.265625 4.558594 14.199219 4 13 4 Z M 13 6 C 14.117188 6 15 6.882813 15 8 L 15 10 C 15 11.667969 13.667969 13 12 13 L 12 15 C 13.132813 15 14.160156 14.609375 15 13.96875 L 15 24.5 C 15 25.339844 14.339844 26 13.5 26 C 12.753906 26 12.15625 25.484375 12.03125 24.78125 L 11.84375 23.8125 L 10.875 23.96875 C 10.699219 23.996094 10.589844 24 10.5 24 C 9.109375 24 8 22.890625 8 21.5 C 8 21.191406 8.050781 20.902344 8.15625 20.625 C 8.164063 20.601563 8.179688 20.585938 8.1875 20.5625 C 8.496094 19.792969 9.167969 19.230469 10 19.0625 L 9.59375 17.09375 C 8.550781 17.304688 7.644531 17.859375 7 18.65625 C 6.371094 17.953125 6 17.023438 6 16 C 6 15.0625 6.320313 14.226563 6.875 13.53125 L 7.1875 13.15625 L 7.09375 12.65625 C 7.039063 12.421875 7 12.214844 7 12 C 7 10.332031 8.332031 9 10 9 L 11 9 L 11 8 C 11 6.882813 11.882813 6 13 6 Z M 19 6 C 20.117188 6 21 6.882813 21 8 L 21 9 L 22 9 C 23.667969 9 25 10.332031 25 12 C 25 12.214844 24.960938 12.421875 24.90625 12.65625 L 24.8125 13.15625 L 25.125 13.53125 C 25.679688 14.226563 26 15.0625 26 16 C 26 17.199219 25.488281 18.269531 24.65625 19 C 23.972656 18.394531 23.101563 18 22.125 18 C 21.179688 18 20.328125 18.335938 19.65625 18.90625 L 20.9375 20.4375 C 21.261719 20.164063 21.660156 20 22.125 20 C 23.089844 20 23.859375 20.722656 23.96875 21.65625 C 23.886719 22.972656 22.835938 24 21.5 24 C 21.410156 24 21.300781 23.996094 21.125 23.96875 L 20.15625 23.8125 L 19.96875 24.78125 C 19.84375 25.484375 19.246094 26 18.5 26 C 17.660156 26 17 25.339844 17 24.5 L 17 13.96875 C 17.839844 14.609375 18.867188 15 20 15 L 20 13 C 18.332031 13 17 11.667969 17 10 L 17 8 C 17 6.882813 17.882813 6 19 6 Z "
+                  fill="#0d3a7d"
+                />
+              </g>
+            </svg>
+            <p class="feature__title">Secure Cloud Backup</p>
+            <p class="feature__description">
+              Protects your data in case of device loss of failure.
+            </p>
+          </div>
+          <div class="feature">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 32 32"
+              version="1.1"
+              fill="#0d3a7d"
+              width="60px"
+              height="60px"
+            >
+              <g id="surface1" fill="#0d3a7d">
+                <path
+                  style=""
+                  d="M 15.5 2.09375 L 14.09375 3.5 L 16.59375 6.03125 C 16.394531 6.019531 16.203125 6 16 6 C 10.5 6 6 10.5 6 16 C 6 17.5 6.304688 18.894531 6.90625 20.09375 L 8.40625 18.59375 C 8.207031 17.792969 8 16.898438 8 16 C 8 11.601563 11.601563 8 16 8 C 16.175781 8 16.359375 8.019531 16.53125 8.03125 L 14.09375 10.5 L 15.5 11.90625 L 19.71875 7.71875 L 20.40625 7 L 19.71875 6.28125 Z M 25.09375 11.90625 L 23.59375 13.40625 C 23.894531 14.207031 24 15.101563 24 16 C 24 20.398438 20.398438 24 16 24 C 15.824219 24 15.640625 23.980469 15.46875 23.96875 L 17.90625 21.5 L 16.5 20.09375 L 12.28125 24.28125 L 11.59375 25 L 12.28125 25.71875 L 16.5 29.90625 L 17.90625 28.5 L 15.40625 25.96875 C 15.601563 25.980469 15.804688 26 16 26 C 21.5 26 26 21.5 26 16 C 26 14.5 25.695313 13.105469 25.09375 11.90625 Z "
+                  fill="#0d3a7d"
+                />
+              </g>
+            </svg>
+            <p class="feature__title">Sync Across All Your Devices</p>
+            <p class="feature__description">
+              Keep passwords updated on computers, tablets, and phones.
+            </p>
+          </div>
+          <div class="feature">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="200"
+              height="200"
+              viewBox="0 0 200 200"
+              fill="none"
+            >
+              <path
+                d="M0 100V200H100H200V100V-2.98023e-06H100H0V100ZM182 100V182H100H18V100V18H100H182V100Z"
+                fill="#163A7D"
+              />
+              <path
+                d="M91 73V91H73H55V100V109H73H91V127V145H100H109V127V109H127H145V100V91H127H109V73V55H100H91V73Z"
+                fill="#163A7D"
+              />
+            </svg>
+            <p class="feature__title">Emergency Access</p>
+            <p class="feature__description">
+              Give a trusted person access in case of an emergency.
+            </p>
+          </div>
+          <div class="feature">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 32 32"
+              version="1.1"
+              fill="#0d3a7d"
+              width="60px"
+              height="60px"
+            >
+              <g id="surface1" fill="#0d3a7d">
+                <path
+                  style=""
+                  d="M 16 4 C 13.855469 4 12.117188 5.71875 12.03125 7.84375 C 8.425781 9.375 6 12.941406 6 17 C 6 17.171875 5.992188 17.359375 6 17.5625 C 4.816406 18.257813 4 19.535156 4 21 C 4 23.199219 5.800781 25 8 25 C 8.574219 25 9.128906 24.878906 9.625 24.65625 C 11.359375 26.113281 13.617188 27 16 27 C 18.382813 27 20.640625 26.113281 22.375 24.65625 C 22.871094 24.878906 23.425781 25 24 25 C 26.199219 25 28 23.199219 28 21 C 28 19.519531 27.175781 18.222656 25.96875 17.53125 C 25.984375 17.371094 26 17.207031 26 17 C 26 12.941406 23.574219 9.375 19.96875 7.84375 C 19.882813 5.71875 18.144531 4 16 4 Z M 16 6 C 17.117188 6 18 6.882813 18 8 C 18 9.117188 17.117188 10 16 10 C 14.882813 10 14 9.117188 14 8 C 14 6.882813 14.882813 6 16 6 Z M 12.46875 9.84375 C 13.140625 11.117188 14.46875 12 16 12 C 17.53125 12 18.859375 11.117188 19.53125 9.84375 C 22.210938 11.144531 24 13.878906 24 17 C 21.800781 17 20 18.800781 20 21 C 20 21.894531 20.308594 22.707031 20.8125 23.375 C 19.476563 24.386719 17.757813 25 16 25 C 14.242188 25 12.523438 24.386719 11.1875 23.375 C 11.691406 22.707031 12 21.894531 12 21 C 12 18.800781 10.199219 17 8 17 C 8 13.878906 9.789063 11.144531 12.46875 9.84375 Z M 8 19 C 9.117188 19 10 19.882813 10 21 C 10 22.117188 9.117188 23 8 23 C 6.882813 23 6 22.117188 6 21 C 6 19.882813 6.882813 19 8 19 Z M 24 19 C 25.117188 19 26 19.882813 26 21 C 26 22.117188 25.117188 23 24 23 C 22.882813 23 22 22.117188 22 21 C 22 19.882813 22.882813 19 24 19 Z "
+                  fill="#0d3a7d"
+                />
+              </g>
+            </svg>
+            <p class="feature__title">Secure Password Sharing</p>
+            <p class="feature__description">
+              Share logins with colleagues or family while keeping them
+              protected.
+            </p>
+          </div>
+          <div class="feature">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="67px"
+              height="49px"
+              viewBox="0 0 67 49"
+              version="1.1"
+            >
+              <title>devices</title>
+              <desc>Created with Sketch.</desc>
+              <defs>
+                <path
+                  d="M9.381,29.29 L46.726,29.29 L51.242,33.744 C51.394,33.897 51.486,34.141 51.486,34.354 C51.486,34.827 51.166,35.148 50.693,35.148 L5.415,35.148 C4.942,35.148 4.622,34.827 4.622,34.354 C4.622,34.141 4.714,33.897 4.866,33.744 L9.381,29.29 Z M10.479,3.905 L45.626,3.905 L45.626,25.384 L10.479,25.384 L10.479,3.905 Z M6.574,0 L6.574,26.483 L2.119,30.999 C1.234,31.884 0.715,33.103 0.715,34.354 C0.715,36.932 2.836,39.053 5.414,39.053 L50.692,39.053 C53.27,39.053 55.39,36.932 55.39,34.354 C55.39,33.103 54.871,31.883 53.987,30.999 L49.532,26.483 L49.532,0 L6.574,0 Z"
+                  id="path-1"
+                />
+                <path
+                  d="M9.519,30.087 L9.519,33.179 L15.865,33.179 L15.865,30.087 L9.519,30.087 Z M3.173,3.808 L22.212,3.808 L22.212,34.725 L3.173,34.725 L3.173,3.808 Z M3.173,0.716 C2.343,0.716 1.494,1 0.893,1.586 C0.292,2.171 0,2.999 0,3.808 L0,34.725 C0,35.535 0.292,36.362 0.893,36.948 C1.494,37.534 2.343,37.817 3.173,37.817 L22.212,37.817 C23.043,37.817 23.892,37.534 24.493,36.948 C25.094,36.362 25.386,35.535 25.386,34.725 L25.386,3.808 C25.386,2.999 25.094,2.171 24.493,1.586 C23.892,1 23.043,0.716 22.212,0.716 L3.173,0.716 L3.173,0.716 Z"
+                  id="path-3"
+                />
+                <rect
+                  id="path-5"
+                  x="0.476"
+                  y="0.771"
+                  width="13.668"
+                  height="25.385"
+                />
+              </defs>
+              <g
+                id="Page-1"
+                stroke="none"
+                stroke-width="1"
+                fill="none"
+                fill-rule="evenodd"
+              >
+                <g id="devices">
+                  <g id="Clipped" transform="translate(11.000000, 0.000000)">
+                    <mask id="mask-2" fill="white">
+                      <use xlink:href="#path-1" />
+                    </mask>
+                    <g id="SVGID_3_" />
+                    <rect
+                      id="Rectangle-path"
+                      fill="#213E7B"
+                      mask="url(#mask-2)"
+                      x="-4.284"
+                      y="-5"
+                      width="64.675"
+                      height="49.054"
+                    />
+                  </g>
+                  <g id="Clipped" transform="translate(0.000000, 11.000000)">
+                    <mask id="mask-4" fill="white">
+                      <use xlink:href="#path-3" />
+                    </mask>
+                    <g id="SVGID_2_" />
+                    <rect
+                      id="Rectangle-path"
+                      fill="#213E7B"
+                      mask="url(#mask-4)"
+                      x="-5"
+                      y="-4.284"
+                      width="35.385"
+                      height="47.101"
+                    />
+                  </g>
+                  <g id="Clipped" transform="translate(8.000000, 14.000000)">
+                    <mask id="mask-6" fill="white">
+                      <use xlink:href="#path-5" />
+                    </mask>
+                    <g id="SVGID_1_" />
+                    <rect
+                      id="Rectangle-path"
+                      fill="#FFFFFF"
+                      mask="url(#mask-6)"
+                      x="-4.524"
+                      y="-4.229"
+                      width="23.668"
+                      height="35.385"
+                    />
+                  </g>
+                </g>
+              </g>
+            </svg>
+            <p class="feature__title">Priority Support</p>
+            <p class="feature__description">
+              Get direct help when you need it.
+            </p>
+          </div>
+          <div class="feature" id="TeamsFeature">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="67px"
+              height="49px"
+              viewBox="0 0 67 49"
+              version="1.1"
+            >
+              <title>devices</title>
+              <desc>Created with Sketch.</desc>
+              <defs>
+                <path
+                  d="M9.381,29.29 L46.726,29.29 L51.242,33.744 C51.394,33.897 51.486,34.141 51.486,34.354 C51.486,34.827 51.166,35.148 50.693,35.148 L5.415,35.148 C4.942,35.148 4.622,34.827 4.622,34.354 C4.622,34.141 4.714,33.897 4.866,33.744 L9.381,29.29 Z M10.479,3.905 L45.626,3.905 L45.626,25.384 L10.479,25.384 L10.479,3.905 Z M6.574,0 L6.574,26.483 L2.119,30.999 C1.234,31.884 0.715,33.103 0.715,34.354 C0.715,36.932 2.836,39.053 5.414,39.053 L50.692,39.053 C53.27,39.053 55.39,36.932 55.39,34.354 C55.39,33.103 54.871,31.883 53.987,30.999 L49.532,26.483 L49.532,0 L6.574,0 Z"
+                  id="path-1"
+                />
+                <path
+                  d="M9.519,30.087 L9.519,33.179 L15.865,33.179 L15.865,30.087 L9.519,30.087 Z M3.173,3.808 L22.212,3.808 L22.212,34.725 L3.173,34.725 L3.173,3.808 Z M3.173,0.716 C2.343,0.716 1.494,1 0.893,1.586 C0.292,2.171 0,2.999 0,3.808 L0,34.725 C0,35.535 0.292,36.362 0.893,36.948 C1.494,37.534 2.343,37.817 3.173,37.817 L22.212,37.817 C23.043,37.817 23.892,37.534 24.493,36.948 C25.094,36.362 25.386,35.535 25.386,34.725 L25.386,3.808 C25.386,2.999 25.094,2.171 24.493,1.586 C23.892,1 23.043,0.716 22.212,0.716 L3.173,0.716 L3.173,0.716 Z"
+                  id="path-3"
+                />
+                <rect
+                  id="path-5"
+                  x="0.476"
+                  y="0.771"
+                  width="13.668"
+                  height="25.385"
+                />
+              </defs>
+              <g
+                id="Page-1"
+                stroke="none"
+                stroke-width="1"
+                fill="none"
+                fill-rule="evenodd"
+              >
+                <g id="devices">
+                  <g id="Clipped" transform="translate(11.000000, 0.000000)">
+                    <mask id="mask-2" fill="white">
+                      <use xlink:href="#path-1" />
+                    </mask>
+                    <g id="SVGID_3_" />
+                    <rect
+                      id="Rectangle-path"
+                      fill="#213E7B"
+                      mask="url(#mask-2)"
+                      x="-4.284"
+                      y="-5"
+                      width="64.675"
+                      height="49.054"
+                    />
+                  </g>
+                  <g id="Clipped" transform="translate(0.000000, 11.000000)">
+                    <mask id="mask-4" fill="white">
+                      <use xlink:href="#path-3" />
+                    </mask>
+                    <g id="SVGID_2_" />
+                    <rect
+                      id="Rectangle-path"
+                      fill="#213E7B"
+                      mask="url(#mask-4)"
+                      x="-5"
+                      y="-4.284"
+                      width="35.385"
+                      height="47.101"
+                    />
+                  </g>
+                  <g id="Clipped" transform="translate(8.000000, 14.000000)">
+                    <mask id="mask-6" fill="white">
+                      <use xlink:href="#path-5" />
+                    </mask>
+                    <g id="SVGID_1_" />
+                    <rect
+                      id="Rectangle-path"
+                      fill="#FFFFFF"
+                      mask="url(#mask-6)"
+                      x="-4.524"
+                      y="-4.229"
+                      width="23.668"
+                      height="35.385"
+                    />
+                  </g>
+                </g>
+              </g>
+            </svg>
+            <p class="feature__title">Team Admin</p>
+            <p class="feature__description">
+              Manage and control the license of the team members with
+              admin-specifie features.
+            </p>
+          </div>
+          <div class="feature">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="67px"
+              height="49px"
+              viewBox="0 0 67 49"
+              version="1.1"
+            >
+              <title>devices</title>
+              <desc>Created with Sketch.</desc>
+              <defs>
+                <path
+                  d="M9.381,29.29 L46.726,29.29 L51.242,33.744 C51.394,33.897 51.486,34.141 51.486,34.354 C51.486,34.827 51.166,35.148 50.693,35.148 L5.415,35.148 C4.942,35.148 4.622,34.827 4.622,34.354 C4.622,34.141 4.714,33.897 4.866,33.744 L9.381,29.29 Z M10.479,3.905 L45.626,3.905 L45.626,25.384 L10.479,25.384 L10.479,3.905 Z M6.574,0 L6.574,26.483 L2.119,30.999 C1.234,31.884 0.715,33.103 0.715,34.354 C0.715,36.932 2.836,39.053 5.414,39.053 L50.692,39.053 C53.27,39.053 55.39,36.932 55.39,34.354 C55.39,33.103 54.871,31.883 53.987,30.999 L49.532,26.483 L49.532,0 L6.574,0 Z"
+                  id="path-1"
+                />
+                <path
+                  d="M9.519,30.087 L9.519,33.179 L15.865,33.179 L15.865,30.087 L9.519,30.087 Z M3.173,3.808 L22.212,3.808 L22.212,34.725 L3.173,34.725 L3.173,3.808 Z M3.173,0.716 C2.343,0.716 1.494,1 0.893,1.586 C0.292,2.171 0,2.999 0,3.808 L0,34.725 C0,35.535 0.292,36.362 0.893,36.948 C1.494,37.534 2.343,37.817 3.173,37.817 L22.212,37.817 C23.043,37.817 23.892,37.534 24.493,36.948 C25.094,36.362 25.386,35.535 25.386,34.725 L25.386,3.808 C25.386,2.999 25.094,2.171 24.493,1.586 C23.892,1 23.043,0.716 22.212,0.716 L3.173,0.716 L3.173,0.716 Z"
+                  id="path-3"
+                />
+                <rect
+                  id="path-5"
+                  x="0.476"
+                  y="0.771"
+                  width="13.668"
+                  height="25.385"
+                />
+              </defs>
+              <g
+                id="Page-1"
+                stroke="none"
+                stroke-width="1"
+                fill="none"
+                fill-rule="evenodd"
+              >
+                <g id="devices">
+                  <g id="Clipped" transform="translate(11.000000, 0.000000)">
+                    <mask id="mask-2" fill="white">
+                      <use xlink:href="#path-1" />
+                    </mask>
+                    <g id="SVGID_3_" />
+                    <rect
+                      id="Rectangle-path"
+                      fill="#213E7B"
+                      mask="url(#mask-2)"
+                      x="-4.284"
+                      y="-5"
+                      width="64.675"
+                      height="49.054"
+                    />
+                  </g>
+                  <g id="Clipped" transform="translate(0.000000, 11.000000)">
+                    <mask id="mask-4" fill="white">
+                      <use xlink:href="#path-3" />
+                    </mask>
+                    <g id="SVGID_2_" />
+                    <rect
+                      id="Rectangle-path"
+                      fill="#213E7B"
+                      mask="url(#mask-4)"
+                      x="-5"
+                      y="-4.284"
+                      width="35.385"
+                      height="47.101"
+                    />
+                  </g>
+                  <g id="Clipped" transform="translate(8.000000, 14.000000)">
+                    <mask id="mask-6" fill="white">
+                      <use xlink:href="#path-5" />
+                    </mask>
+                    <g id="SVGID_1_" />
+                    <rect
+                      id="Rectangle-path"
+                      fill="#FFFFFF"
+                      mask="url(#mask-6)"
+                      x="-4.524"
+                      y="-4.229"
+                      width="23.668"
+                      height="35.385"
+                    />
+                  </g>
+                </g>
+              </g>
+            </svg>
+            <p class="feature__title">
+              <span style="color: red; font-weight: bold">NEW!</span>
+              Contactless Connect
+            </p>
+            <p class="feature__description">
+              Sucure autofill, unlimited storage, strong password generator, and
+              more.
+            </p>
+          </div>
+          <div class="feature" id="TeamsFeatureDWM">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="392"
+              height="188"
+              viewBox="0 0 392 188"
+              fill="none"
+            >
+              <path
+                d="M80.9 7L5.5 50.6V137.7L80.9 181.2L156.3 137.7V50.6L80.9 7Z"
+                fill="#EE7623"
+              />
+              <path
+                d="M80.9001 187.4L0.100098 140.8V47.4L80.9001 0.799988L161.7 47.4V140.7L80.9001 187.4ZM5.5001 137.6L80.9001 181.1L156.3 137.6V50.6L80.9001 6.99999L5.5001 50.6V137.6Z"
+                fill="black"
+              />
+              <path
+                d="M183.9 135.3L212.9 51.9H222.6L251.6 135.3H240.6L234.2 116.2H201.3L194.9 135.3H183.9ZM204.5 106.8H230.8L217.6 67.7L204.5 106.8Z"
+                fill="black"
+              />
+              <path
+                d="M310.5 135.3L293.1 100.1H273.4V135.3H263V52H289.6C308.8 52 319.9 60 319.9 76.2C319.9 87.9 314.1 95.3 303.5 98.4L322.1 135.4H310.5V135.3ZM289.6 90.7C303.7 90.7 309.5 86.4 309.5 76.1C309.5 65.7 303.7 61.4 289.6 61.4H273.4V90.8H289.6V90.7Z"
+                fill="black"
+              />
+              <path
+                d="M381.8 77.9C378.9 64.9 372.3 60.4 362 60.4C349.2 60.4 342.2 68.4 342.2 89V98.2C342.2 118.9 349.2 126.8 362 126.8C372.9 126.8 379 121.5 381.8 109.3H391.8C389.1 128 377.8 136.2 362 136.2C343.5 136.2 331.8 125.1 331.8 98.1V88.9C331.8 62 343.5 50.8 362 50.8C378.4 50.8 389.3 59.5 392 77.7H381.8V77.9Z"
+                fill="black"
+              />
+              <path
+                d="M45.9996 92.9L79.6996 42.3L113.4 93.5C120.9 97.4 127.6 102.6 133.3 108.7L85.1996 36.2C84.0996 34.5 82.1996 33 79.6996 33C77.3996 33 75.2996 34.7 74.2996 36.2L28.0996 105.4C33.3996 100.4 39.3996 96.2 45.9996 92.9Z"
+                fill="white"
+              />
+              <path
+                d="M25.2998 126.7C48.9998 100 87.7998 89.2 116.7 114.6C125.3 122 132.2 131.3 136.3 141.6C129.5 132.9 121.7 125.3 113.1 119.2C83.7998 98 53.1998 108.7 25.2998 126.7Z"
+                fill="white"
+              />
+            </svg>
+            <p class="feature__title">Dark Web Monitoring</p>
+            <p class="feature__description">All team members.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-gray">
+      <div class="container">
+        <div class="dwm">
+          <h2 class="dwm__title" id="IndividualsDWMTitle">
+            Dark Web Monitoring - Included in Your First Year
+          </h2>
+          <h2 class="dwm__title" id="TeamsDWMTitle">Dark Web Monitoring</h2>
+          <p class="dwm__description">
+            Your passwords are secure-but what about the accounts they protect?
+            With Dark Web Monitoring (DWM), Sticky Password helps keep your
+            digital identity safe by scanning for exposed credentials and
+            alerting you to potential breaches.
+          </p>
+          <ul class="dwm__list" id="ListDWM">
+            <li>
+              <strong>Included for free in your first year with</strong> a
+              Lifetime license
+            </li>
+            <li>
+              <strong>Alerts you if your accounts are found in a breach</strong>
+            </li>
+            <li>
+              <strong>
+                Easily renew for just $12/year ar $24 for 2 years
+              </strong>
+            </li>
+          </ul>
+          <p id="TextDWM">
+            Protect your passwords and the accounts they unlock-all within the
+            password manager you trust.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./main.js"></script>
+</html>
