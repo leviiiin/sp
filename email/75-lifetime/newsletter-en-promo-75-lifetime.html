@@ -14,14 +14,29 @@
         transition: 0.3s !important;
       }
 
+      @media (max-width: 400px) {
+        .button {
+          font-size: 18px !important;
+          padding: 15px 18px !important;
+        }
+      }
+
       .button:hover {
         background: #80ae00 !important;
       }
 
       @media (max-width: 500px) {
         .banner {
-          height: 60px !important;
-          background-position: -155px center !important;
+          width: 100% !important;
+          max-width: 500px !important;
+          height: 50px !important;
+          background-image: url("https://www.stickypassword.com/pictures/banners/cc-banners/cc-mobile-en.jpg");
+        }
+      }
+
+      @media (max-width: 400px) {
+        .banner {
+          height: 40px !important;
         }
       }
 
@@ -1082,11 +1097,7 @@
                       >$199.99</span
                     >
                     <span
-                      style="
-                        font-size: 40px;
-                        font-weight: 600;
-                        color: #94bf1f;
-                      "
+                      style="font-size: 40px; font-weight: 600; color: #94bf1f"
                       >$49.99</span
                     >
                   </div>
