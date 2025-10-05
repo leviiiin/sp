@@ -68,7 +68,7 @@ async function getPassphrase(lang) {
   const plusNumbers = document.querySelector('input[name="num-option"]:checked');
 
   try {
-    const module = await import(`/passphrase-generator/lists/${lang}.js`);
+    const module = await import(`/sp/passphrase-generator/lists/${lang}.js`);
     const list = module.list;
 
     if (!list || typeof list !== 'object') {
@@ -253,3 +253,4 @@ if (passphraseHide) {
   });
 
 }
+
