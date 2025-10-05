@@ -1,0 +1,354 @@
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(#22bdff, #0d3a7d);
+}
+
+.passphrase-generator {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background: white;
+  max-width: 40%;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.words-range {
+  background: linear-gradient(to right, #0D3A7D 30%, #DBDBDB 0%);
+  border-radius: 3px;
+  height: 8px;
+  width: 100%;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+}
+
+.words-range::-webkit-slider-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  cursor: ew-resize;
+  background: #0D3A7D;
+}
+
+.words-range::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #0D3A7D;
+  cursor: ew-resize;
+  border: none;
+}
+
+.words-quantity {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  padding-left: 2px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.words-type, .num-option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.words-type::before, .num-option::before {
+  content: '';
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  background-color: #0d3a7d;
+}
+
+.words-type>input[type="radio"]:checked+span::before,
+.num-option>input[type="checkbox"]:checked+span::before {
+  position: absolute;
+  top: -4px;
+  left: 4px;
+  content: '✓';
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.num-option>input[type="checkbox"]:checked+span::before {
+  top: 6px;
+}
+
+.num-option {
+  border-top: 1px solid #DBDBDB;
+  padding-top: 10px;
+  max-width: 150px;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #000000;
+  position: relative;
+}
+
+.separator::before {
+  content: '';
+  width: 26px;
+  height: 26px;
+  border-radius: 5px;
+  background-color: #DBDBDB;
+}
+
+.separator>input[type="radio"]:checked+span {
+  color: white;
+  background: #0d3a7d;
+  border-radius: 5px;
+}
+
+.separator>span {
+  display: block;
+  width: 26px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.separators {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.separators-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#generateBtn, #copyBtn {
+  width: 200px;
+  height: 55px;
+  margin: 0 auto;
+  margin-top: 30px;
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1em;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background: #ff8200;
+  background: linear-gradient(#ff8200 0, #e55a00 100%);
+  border: none;
+  border-top: 1px solid #ff8200;
+  border-bottom: 1px solid #9b3c00;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#generateBtn.spin svg {
+  animation-name: spin;
+  animation-duration: 300ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#copyBtn {
+  margin-top: 50px;
+  position: relative;
+}
+
+.copied::before {
+  content: 'Copied';
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: rgb(0, 145, 0);
+  border: 1px solid rgb(0, 145, 0);
+  padding: 40px 80px;
+  background: white;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+#copyBtn svg {
+  width: 24px;
+  height: 24px;
+}
+
+#generateBtn:hover, #copyBtn:hover {
+  background: linear-gradient(#ff8200 0, #ff8200 100%);
+}
+
+.passphraseLabel {
+  margin-top: 30px;
+  position: relative;
+  max-width: 100%;
+}
+
+#passphrase {
+  display: block;
+  width: calc(100% - 52px);
+  min-height: 30px;
+  font-size: 16px;
+  padding: 10px 40px 10px 10px;
+  border-radius: 10px;
+  resize: vertical;
+}
+
+@media (max-width: 500px) {
+  #passphrase {
+    min-height: 80px;
+  }
+}
+
+@media (max-width: 375px) {
+  #passphrase {
+    min-height: 100px;
+  }
+}
+
+#passphrase:disabled {
+  background: white;
+  border: 2px solid #C5C5C5;
+}
+
+#passphraseHide {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  cursor: pointer;
+  color: #C5C5C5;
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+#passphraseHide.blue {
+  color: #0d3a7d;
+}
+
+#passphraseHide svg {
+  width: 30px;
+}
+
+.strength-meter {
+  height: 10px;
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+#strengthBar {
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.5s ease-in-out;
+}
+
+
+.strength-weak {
+  background-color: red;
+}
+
+.strength-good {
+  background-color: orange;
+}
+
+.strength-strong {
+  background-color: gold;
+}
+
+.strength-very-strong {
+  background-color: green;
+}
+
+#strengthTitle {
+  margin-top: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.strength-icon {
+  padding: 0 4px;
+  background: #C5C5C5;
+  border-radius: 50%;
+  font-weight: 600;
+  color: white;
+}
+
+.strength-icon.weak {
+  padding: 2px 7px;
+  background: red;
+}
+
+.strength-icon.good {
+  background: orange;
+}
+
+.strength-icon.strong {
+  background: gold;
+  color: black;
+}
+
+.strength-icon.very-strong {
+  background: green;
+}
+
+@media (max-width: 1024px) {
+  .passphrase-generator {
+    max-width: 100%;
+    margin: 200px 15px 0 15px;
+  }
+}
+
+@media (max-width: 425px) {
+  .separators {
+    flex-direction: column;
+    gap: 15px;
+    align-items: start;
+  }
+}

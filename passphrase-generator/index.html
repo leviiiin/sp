@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passphrase generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="passphrase-generator">
+      <input type="range" min="3" max="10" value="5" class="words-range" />
+      <div class="words-quantity">5 words</div>
+      <div>
+        <label for="capitals" class="words-type">
+          <input
+            type="radio"
+            id="capitals"
+            name="text-option"
+            value="capitals"
+            checked
+          />
+          <span></span>
+          Capitals
+        </label>
+        <label for="uppercase" class="words-type">
+          <input
+            type="radio"
+            id="uppercase"
+            name="text-option"
+            value="uppercase"
+          />
+          <span></span>
+          Uppercase
+        </label>
+        <label for="lowercase" class="words-type">
+          <input
+            type="radio"
+            id="lowercase"
+            name="text-option"
+            value="lowercase"
+          />
+          <span></span>
+          Lowercase
+        </label>
+        <label for="numbers" class="num-option">
+          <input
+            type="checkbox"
+            id="numbers"
+            name="num-option"
+            value="numbers"
+          />
+          <span></span>
+          Numbers
+        </label>
+      </div>
+      <div class="separators">
+        Separator
+        <div class="separators-flex">
+          <label class="separator" for="separator1">
+            <input
+              type="radio"
+              value="-"
+              id="separator1"
+              name="separator"
+              checked
+            />
+            <span>-</span>
+          </label>
+          <label class="separator" for="separator2">
+            <input type="radio" value="." id="separator2" name="separator" />
+            <span>.</span>
+          </label>
+          <label class="separator" for="separator3">
+            <input type="radio" value="_" id="separator3" name="separator" />
+            <span>_</span>
+          </label>
+          <label class="separator" for="separator4">
+            <input type="radio" value="!" id="separator4" name="separator" />
+            <span>!</span>
+          </label>
+          <label class="separator" for="separator5">
+            <input type="radio" value="?" id="separator5" name="separator" />
+            <span>?</span>
+          </label>
+          <label class="separator" for="separator6">
+            <input type="radio" value=" " id="separator6" name="separator" />
+            <span>␣</span>
+          </label>
+        </div>
+      </div>
+      <button id="generateBtn">
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 42 42"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17.5 28H8.75V36.75M24.5 14H33.25V5.25M8.02026 15.756C9.00146 13.3274 10.6443 11.2228 12.762 9.6814C14.8797 8.13998 17.3895 7.22316 20.0021 7.03589C22.6146 6.84862 25.2258 7.39795 27.5417 8.62157C29.8576 9.84519 31.7821 11.6944 33.0997 13.9582M33.9807 26.2449C32.9995 28.6734 31.3567 30.778 29.239 32.3194C27.1213 33.8609 24.614 34.7765 22.0015 34.9638C19.3889 35.151 16.7756 34.6018 14.4597 33.3782C12.1438 32.1546 10.2179 30.3056 8.90039 28.0419"
+            stroke="white"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        Generate
+      </button>
+      <label for="passphrase" class="passphraseLabel">
+        <textarea id="passphrase" disabled></textarea>
+        <button id="passphraseHide" class="blue">
+          <svg
+            width="39"
+            height="21"
+            viewBox="0 0 39 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19.8823 0C9.55459 0 1.60875 9.57202 1.60875 9.57202L0.873047 10.428L1.60875 11.284C1.60875 11.284 8.8551 19.974 18.489 20.774C18.949 20.834 19.4071 20.854 19.8823 20.854C20.3576 20.854 20.8137 20.834 21.2757 20.774C30.9096 19.974 38.1559 11.284 38.1559 11.284L38.8916 10.428L38.1559 9.57202C38.1559 9.57202 30.2101 0 19.8823 0ZM19.8823 2.60602C22.6102 2.60602 25.1288 3.392 27.3149 4.44C28.1019 5.814 28.5544 7.39802 28.5544 9.12402C28.56 11.371 27.7766 13.541 26.3547 15.2175C24.9328 16.8941 22.9724 17.9591 20.8499 18.208H20.7739C20.4773 18.226 20.1846 18.248 19.8823 18.248C19.5554 18.248 19.236 18.228 18.9128 18.208C16.7906 17.9586 14.8307 16.8934 13.4092 15.2169C11.9876 13.5404 11.2046 11.3707 11.2103 9.12402C11.2103 7.42402 11.6456 5.84198 12.4097 4.47998H12.3718C14.5769 3.41198 17.1222 2.60602 19.8823 2.60602ZM19.8823 5.21399C18.8967 5.21399 17.9515 5.62592 17.2545 6.35919C16.5576 7.09246 16.166 8.08703 16.166 9.12402C16.166 10.161 16.5576 11.1555 17.2545 11.8888C17.9515 12.6221 18.8967 13.034 19.8823 13.034C20.868 13.034 21.8132 12.6221 22.5102 11.8888C23.2071 11.1555 23.5987 10.161 23.5987 9.12402C23.5987 8.08703 23.2071 7.09246 22.5102 6.35919C21.8132 5.62592 20.868 5.21399 19.8823 5.21399ZM9.04133 6.43402C8.83886 7.31494 8.73483 8.21772 8.73143 9.12402C8.73143 11.41 9.3531 13.55 10.4366 15.356C8.2365 14.002 6.21826 12.3446 4.43543 10.428C5.83994 8.93853 7.38294 7.59921 9.04133 6.43402ZM30.7233 6.43402C32.3818 7.59984 33.9248 8.93784 35.3292 10.428C33.5464 12.3446 31.5282 14.002 29.328 15.356C30.4116 13.55 31.0332 11.41 31.0332 9.12402C31.0332 8.19402 30.9172 7.30202 30.7233 6.43402Z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      </label>
+      <div class="strength-meter">
+        <div id="strengthBar" style="width: 0%"></div>
+        <div id="strengthTitle"></div>
+      </div>
+      <button id="copyBtn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="19"
+          viewBox="0 0 16 19"
+          fill="none"
+        >
+          <path
+            id="Shape"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M11.8333 0.576538H1.83333C0.916666 0.576538 0.166667 1.32654 0.166667 2.2432V13.9099H1.83333V2.2432H11.8333V0.576538ZM14.3333 3.90987H5.16667C4.25 3.90987 3.5 4.65987 3.5 5.57654V17.2432C3.5 18.1599 4.25 18.9099 5.16667 18.9099H14.3333C15.25 18.9099 16 18.1599 16 17.2432V5.57654C16 4.65987 15.25 3.90987 14.3333 3.90987ZM5.16667 17.2432H14.3333V5.57654H5.16667V17.2432Z"
+            fill="white"
+          />
+        </svg>
+        Copy
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
